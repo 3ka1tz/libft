@@ -8,7 +8,7 @@
  * @return int Returns 1 if the character is alphabetic, 0 otherwise.
  */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_isalpha(int c)
 {
