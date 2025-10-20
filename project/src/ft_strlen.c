@@ -1,4 +1,4 @@
-#include <stddef.h> // provides size_t
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {

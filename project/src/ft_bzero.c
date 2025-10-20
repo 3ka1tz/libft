@@ -1,6 +1,6 @@
-#include <stddef.h> // provides size_t
+#include <stddef.h>
 
-#include "../include/libft.h" // provides ft_memset
+#include "../include/libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
