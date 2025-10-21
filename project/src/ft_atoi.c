@@ -1,24 +1,25 @@
-int	ft_atoi(const char *nptr)
+int ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	result;
+    while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
+        nptr++;
 
-	i = 0;
-	sign = 1;
-	result = 0;
-	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
-		i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
-	{
-		if (nptr[i] == '-')
-			sign = -1;
-		i++;
-	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		result = result * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (sign * result);
+    int sign = 1;
+    if (*nptr == '+')
+    {
+        nptr++;
+    }
+    else if (*nptr == '-')
+    {
+        sign = -1;
+        nptr++;
+    }
+
+    int result = 0;
+    while (*nptr >= '0' && *nptr <= '9')
+    {
+        result = result * 10 + (*nptr - '0');
+        nptr++;
+    }
+
+    return (sign * result);
 }
