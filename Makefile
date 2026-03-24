@@ -1,4 +1,4 @@
-NAME = libft
+NAME = libft.a
 
 SRC_DIR = src
 OBJ_DIR = obj
@@ -55,23 +55,22 @@ GREEN = "\033[32m"
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+	ar rcs $(NAME) $(OBJS)
 	@echo $(GREEN)Libft compiled!$(RESET)
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ_DIR)
 	@echo $(RED)Libft objects cleaned.$(RESET)
 
-fclean:
-	rm -rf $(OBJ_DIR)
+fclean: clean
 	rm -f $(NAME)
-	@echo $(RED)Libft objects and executable cleaned.$(RESET)
+	@echo $(RED)Libft library cleaned.$(RESET)
 
 re: fclean all
 
