@@ -30,15 +30,19 @@ SRCS = $(SRC_DIR)/ft_atoi.c \
        $(SRC_DIR)/ft_putendl_fd.c \
        $(SRC_DIR)/ft_putnbr_fd.c \
        $(SRC_DIR)/ft_putstr_fd.c \
+       $(SRC_DIR)/ft_split.c \
        $(SRC_DIR)/ft_strchr.c \
        $(SRC_DIR)/ft_strdup.c \
+       $(SRC_DIR)/ft_striteri.c \
        $(SRC_DIR)/ft_strjoin.c \
        $(SRC_DIR)/ft_strlcat.c \
        $(SRC_DIR)/ft_strlcpy.c \
        $(SRC_DIR)/ft_strlen.c \
+       $(SRC_DIR)/ft_strmapi.c \
        $(SRC_DIR)/ft_strncmp.c \
        $(SRC_DIR)/ft_strnstr.c \
        $(SRC_DIR)/ft_strrchr.c \
+       $(SRC_DIR)/ft_strtrim.c \
        $(SRC_DIR)/ft_substr.c \
        $(SRC_DIR)/ft_tolower.c \
        $(SRC_DIR)/ft_toupper.c
