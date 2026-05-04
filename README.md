@@ -8,7 +8,20 @@ This project is your very first project as a learner at 42. You will need to rec
 
 ## Instructions
 
-...
+1. Clone the repository:
+```bash
+git clone https://github.com/3ka1tz/libft.git
+```
+
+2. Move into it:
+```bash
+cd ~/libft/
+```
+
+3. Build the project:
+```bash
+make
+```
 
 ## Resources
 https://en.wikipedia.org/wiki/C_standard_library
