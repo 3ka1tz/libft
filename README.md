@@ -11,4 +11,4 @@ This project is your very first project as a learner at 42. You will need to rec
 ...
 
 ## Resources
-https://github.com/Tripouille/libftTester
+https://en.wikipedia.org/wiki/C_standard_library
