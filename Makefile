@@ -1,5 +1,6 @@
 NAME = libft.a
 
+INC_DIR = inc
 SRC_DIR = src
 OBJ_DIR = obj
 
@@ -50,7 +51,7 @@ SRCS = $(SRC_DIR)/ft_atoi.c \
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I $(INC_DIR)
 
 RESET = "\033[0m"
 RED = "\033[31m"
@@ -59,22 +60,22 @@ GREEN = "\033[32m"
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-	@echo $(GREEN)Libft compiled!$(RESET)
+	@ar rcs $(NAME) $(OBJS)
+	@echo $(GREEN)$(NAME) compiled$(RESET)
 
 $(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ_DIR)
-	@echo $(RED)Libft objects cleaned.$(RESET)
+	@rm -rf $(OBJ_DIR)
+	@echo $(RED).o files removed$(RESET)
 
 fclean: clean
-	rm -f $(NAME)
-	@echo $(RED)Libft library cleaned.$(RESET)
+	@rm -f $(NAME)
+	@echo $(RED)$(NAME) removed$(RESET)
 
 re: fclean all
 

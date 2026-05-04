@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#include "../include/libft.h"
+#include "libft.h"
 
 static size_t	numlen(int n)
 {

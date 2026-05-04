@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#include "../include/libft.h"
+#include "libft.h"
 
 static int	count_words(const char *str, char c)
 {
