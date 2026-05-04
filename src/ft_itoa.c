@@ -11,8 +11,8 @@ static size_t	numlen(int n)
 		len++;
 	while (n != 0)
 	{
-		n /= 10;
 		len++;
+		n /= 10;
 	}
 	return (len);
 }
