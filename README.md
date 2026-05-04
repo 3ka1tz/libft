@@ -23,5 +23,15 @@ cd ~/libft/
 make
 ```
 
+To use the library in your code, include the header:
+```c
+#include "libft.h"
+```
+
+When compiling your project, add the library to the command line:
+```bash
+cc -Wall -Wextra -Werror main.c libft.a -o program_name
+```
+
 ## Resources
 https://en.wikipedia.org/wiki/C_standard_library
