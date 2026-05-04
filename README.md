@@ -28,7 +28,7 @@ To use the library in your code, include the header:
 #include "libft.h"
 ```
 
-When compiling your project, add the library to the command line:
+When compiling your project, link the library by including it in your compilation command:
 ```bash
 cc -Wall -Wextra -Werror main.c libft.a -o program_name
 ```
