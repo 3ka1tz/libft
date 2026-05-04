@@ -25,7 +25,7 @@ make
 
 To use the library in your code, include the header:
 ```c
-#include "libft.h"
+#include "~/include/libft.h"
 ```
 
 When compiling your project, link the library by including it in your compilation command:
