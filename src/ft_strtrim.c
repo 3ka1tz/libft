@@ -11,11 +11,11 @@ static int	is_in_set(char c, const char *set)
 	return (0);
 }
 
-char	*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s, const char *set)
 {
+	char	*str;
 	size_t	start;
 	size_t	end;
-	char	*str;
 	size_t	i;
 
 	if (!s1 || !set)
@@ -23,12 +23,10 @@ char	*ft_strtrim(const char *s1, const char *set)
 	start = 0;
 	while (s1[start] && is_in_set(s1[start], set))
 		start++;
-	end = 0;
-	while (s1[end])
-		end++;
+	end = ft_strlen(s1);
 	while (end > start && is_in_set(s1[end - 1], set))
 		end--;
-	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
+	str = malloc(end - start + 1);
 	if (!str)
 		return (NULL);
 	i = 0;
