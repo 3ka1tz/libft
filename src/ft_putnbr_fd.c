@@ -2,23 +2,23 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	nb;
+	long	nbr;
 	char	c;
 
-	nb = n;
-	if (nb < 0)
+	nbr = n;
+	if (nbr < 0)
 	{
 		ft_putchar_fd('-', fd);
-		nb = -nb;
+		nbr = -nbr;
 	}
-	if (nb >= 10)
+	if (nbr >= 10)
 	{
-		ft_putnbr_fd(nb / 10, fd);
-		ft_putnbr_fd(nb % 10, fd);
+		ft_putnbr_fd(nbr / 10, fd);
+		ft_putnbr_fd(nbr % 10, fd);
 	}
 	else
 	{
-		c = nb + '0';
+		c = nbr + '0';
 		ft_putchar_fd(c, fd);
 	}
 }
