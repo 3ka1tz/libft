@@ -1,6 +1,6 @@
-#include "libft.h"
-
 #include <stdlib.h>
+
+#include "libft.h"
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
@@ -15,7 +15,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;
-	substr = malloc(sizeof(char) * (len + 1));
+	substr = malloc(len + 1);
 	if (!substr)
 		return (NULL);
 	i = 0;
