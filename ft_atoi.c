@@ -12,10 +12,11 @@ int	ft_atoi(const char *nptr)
 	while (ft_isspace(*nptr))
 		nptr++;
 	sign = 1;
-	if (*nptr == '+' || *nptr == '-')
+	if (*nptr == '+')
+		nptr++;
+	else if (*nptr == '-')
 	{
-		if (*nptr == '-')
-			sign = -1;
+		sign = -1;
 		nptr++;
 	}
 	result = 0;
