@@ -38,8 +38,7 @@ char	*ft_itoa(int n)
 		str[0] = '0';
 	while (nbr > 0)
 	{
-		str[len - 1] = (nbr % 10) + '0';
-		len--;
+		str[--len] = (nbr % 10) + '0';
 		nbr /= 10;
 	}
 	return (str);
