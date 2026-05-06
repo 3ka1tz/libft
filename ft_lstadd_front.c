@@ -1,9 +1,9 @@
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new_node)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst || !new_node)
+	if (!lst || !new)
 		return ;
-	new_node->next = *lst;
-	*lst = new_node;
+	new->next = *lst;
+	*lst = new;
 }
